@@ -1,0 +1,6 @@
+framework module webfunny_otel_ios_crashreporting {
+  umbrella header "webfunny_otel_ios_crashreporting-umbrella.h"
+
+  export *
+  module * { export * }
+}

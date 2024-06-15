@@ -1,0 +1,1515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		8D53C58097CCE41070956936598B94B4 /* PLCrashReporter */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 066D56F74583C15073A6C0D58DCEA4A0 /* Build configuration list for PBXAggregateTarget "PLCrashReporter" */;
+			buildPhases = (
+				AFEB3AD5881535B0460419DF1BF864B0 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+				F41E1F1356F6EC18DD27C53EB331E44C /* PBXTargetDependency */,
+			);
+			name = PLCrashReporter;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		012C3399C5D428F71E9D37C4973C7D18 /* SpanBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5192FEA43797C54044DECE4918CABAD /* SpanBuilder.swift */; };
+		047613413D0DA0238784577E8AF6E0D8 /* ContextPropagators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913AD26249A21BB819D2EA566D97D5D1 /* ContextPropagators.swift */; };
+		080ED69C93FF07D90E71AAC0F78697A4 /* RetryExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FD9759AF42D57431CA4D6EBA27C8F7 /* RetryExporter.swift */; };
+		094026CCEB0CC08F2BF008BB5E1D4324 /* SpanProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EF6439A6E08E9BA22F0BAF0EE75D6 /* SpanProcessor.swift */; };
+		0DFBB3E17194204851C187AE6D631B52 /* ActivityContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C4F84EDFC6F9D5FC84662615F36100 /* ActivityContextManager.swift */; };
+		0E11DB2CB2BCD18C2330A422AACD409E /* Sampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA8DA6B9E524776DD252C2FA0D5BCD5 /* Sampler.swift */; };
+		0ED871C95913E6436D16829239C5D05A /* BandwidthTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFCD6E95C3CD10C29C5BE2590BBBAF /* BandwidthTracker.swift */; };
+		110F88110ADC5F21CB3370999CCF5C99 /* InstrumentationLibraryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9942C47BB9F532AE5CB4E76F231039 /* InstrumentationLibraryInfo.swift */; };
+		1527C743B670AFA694A9D7736E7100DE /* TraceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7000F980D1BBEC676B118FB1CC038A8E /* TraceState.swift */; };
+		15335C3C755FE7154674C18531B9B170 /* EmptyBaggage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BA3CFE301A92D6BA9F1A5DF116C0D8 /* EmptyBaggage.swift */; };
+		1602E3F91591A6F88C87A9B54A0756C9 /* ExportResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BCA6836B1F5CA9FC078BEFC44D4580 /* ExportResult.swift */; };
+		167A2506B23ECD6DD0CB231E6E732D06 /* DefaultBaggage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F7C6872A03ADC697555239777C2431 /* DefaultBaggage.swift */; };
+		17DBAB4A97F24713B3576EF77B489F5A /* SpanFromDiskExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93432040B7E5D52A6B82F811DD3DFFF6 /* SpanFromDiskExporter.swift */; };
+		1947D31B9ACF324C11C2FCA3267987D1 /* SpanToDiskExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734A24563AB689F4B3DA9427CAD0A450 /* SpanToDiskExporter.swift */; };
+		1A6DDFAE5E5387374DC56239742A683A /* MillisClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CA8E4EDA9AF8BCB0732BC47C05D465 /* MillisClock.swift */; };
+		210E7A954417AEE20CEE193B79E0ECF7 /* TracerProviderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A5CDCE8D5087A2F26F3E732A1283F4 /* TracerProviderBuilder.swift */; };
+		2135243A829306B9C4202E64C774AD34 /* MonotonicClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220D05208E916BF42512A4771AAA885D /* MonotonicClock.swift */; };
+		25865A673C9226725B23AD8DA3708E4E /* ReadableSpan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB323137E7E8859BCFC4348B1303ACD /* ReadableSpan.swift */; };
+		298E386D3EF04E7E650A34A6929E1EAC /* TracerSharedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0076B010BF49F18938C4FBEEE4232A /* TracerSharedState.swift */; };
+		2D22C6D06B991B70440FB8936C307CE1 /* webfunny_otel_ios_crashreporting-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AAB47E9DC1CDBEFF849267BD90DC5 /* webfunny_otel_ios_crashreporting-dummy.m */; };
+		2DC5F8A821CCE887F7D890794490663A /* ZipkinBaggagePropagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B91376A2475F861A61B6BA07FB91B6 /* ZipkinBaggagePropagator.swift */; };
+		33E1D9B4AB2E83A914C8535912C6D1D8 /* DefaultTracer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E662FA8AC793282009583BA7FC753EBA /* DefaultTracer.swift */; };
+		365094213F1B9DF33DBA5C398D63FED0 /* DefaultContextPropagators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E5FF455A4D4945E8EF30DB31AD16AD /* DefaultContextPropagators.swift */; };
+		367CE1845D4FCBF8291C991A8E696A82 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD299CF09E0818FF0D911F2A29A1656F /* Status.swift */; };
+		37544FA2DD9F04390410992A875AF6A5 /* EnvVarResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBA15586CB45EDC80744FF8818D9D89 /* EnvVarResource.swift */; };
+		3C3545FB6D1432369E5E519B177CBE82 /* OpenTelemetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFDC1CC757F353CCF66499ED6950B4A /* OpenTelemetry.swift */; };
+		3CCE1FC440869963EF93A802FE081659 /* Pods-TestApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8221EB1602BAFCB6879A4473A7B41863 /* Pods-TestApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D53E19C32CF2C96317816D8FCD191E2 /* TextMapBaggagePropagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95DFB81A284E39B6A862A56A06F1DD6 /* TextMapBaggagePropagator.swift */; };
+		3D758C0B4CEDCC29B7EE357EA7D1E457 /* W3CBaggagePropagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0006D335C2BDF4A61CE9168AB2519B8 /* W3CBaggagePropagator.swift */; };
+		3F221AB3022F700EA90C2B4F0EA15A96 /* SpanDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A317912D2D995824E10C7D2D417979 /* SpanDb.swift */; };
+		3FB3DBE110ABEF9E587D2F53A69781BF /* AttributeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC07EC202E8B498183DBBD533D6504 /* AttributeValue.swift */; };
+		42F202BF1F6DDB45607F39F705248985 /* TraceFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F110A215F513A8CEA109C760D19EE0 /* TraceFlags.swift */; };
+		4449393DD833BB46BDBD37167FE46BB0 /* EntryValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB0D02989E3B27462A05F9E66DCD72 /* EntryValue.swift */; };
+		485CBF9D7B2C08E9761844904B0A5393 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903DDC4EAE6A61ED39E12B8942EB2BDB /* Clock.swift */; };
+		4A8941436BB9030201F8C3F05B163B59 /* Tracer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5803B2B6C991F4F32DCAC75FD725185D /* Tracer.swift */; };
+		4D71D04BCA3C1868B06DB47D3F225869 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EF9DA8974D067379D4DA058D7C3047 /* Constants.swift */; };
+		4EDA0DF4031210DD75C7102593C7D955 /* LimitingExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24040951C6A1174531A6AEAB25AC72B2 /* LimitingExporter.swift */; };
+		4F1B45273BF7CAF4775B21BC79B109CF /* SwiftExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD4F3FB5ACD8EA7F120C45BAE99833 /* SwiftExtensions.swift */; };
+		4F5423E0D1585A84C7B45C099132D4A6 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CA6D45AD4DB6F551F6C0660D54AB4E /* Session.swift */; };
+		4FAB159D6F32CE57CFF4DD7EC4865576 /* webfunny_otel_ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B87F16C2CE38DC2ACEBA9061F9C815B6 /* webfunny_otel_ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FE1A3B426F7F2DDA971924FE275085F /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6B7EF8F9B25879BF23C4CD58062D97 /* Resource.swift */; };
+		51F2DACEE242AFA58C8777C8D4887C35 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 087DE2E4E4147BE5A78E8CF486704F7D /* PrivacyInfo.xcprivacy */; };
+		5260117942048C6736E1F0E0680FAC41 /* ZipkinEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DF292FDE2BEF0AFD5307FDA4F8A3C4 /* ZipkinEndpoint.swift */; };
+		53D1E8D79F6A7E87F125428C84691850 /* ResourceAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F1E11331C3E6FC8E62EC687EFCD76 /* ResourceAttributes.swift */; };
+		569BCE41CAD702A73D38F1827DBC0EFD /* Locks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4539419C6929CCBF6122F41D5E7B70 /* Locks.swift */; };
+		5A715419F9E6D11FB0B1DF310FA09489 /* BaggageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B294F0E82F626DB9D1B3DC9DEC8EB0 /* BaggageBuilder.swift */; };
+		5AC51CF968724F98F1D59053A3CC0F09 /* SpanExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F420C97101F59D444BD71110297A9D /* SpanExporter.swift */; };
+		5C0911B5A53BC3AEFCD414CE28C44E71 /* UIInstrumentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB2F48AFDE12B1FA6A31308E942258C /* UIInstrumentation.swift */; };
+		5D84D697669CBAB3B707505A8D1458D7 /* ZipkinConversionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D639C4A639750A45C76E30154CE7F4 /* ZipkinConversionExtension.swift */; };
+		5FA60BCA9876EA29E45892417F9D1ED6 /* DefaultBaggageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBEC62D53429EFBC6B405B8C7FA472D /* DefaultBaggageBuilder.swift */; };
+		5FD6E695661BC3ACFE9F23FA7D0DBD19 /* SimpleSpanProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402BB917BCCAC24F452834DC7FE34972 /* SimpleSpanProcessor.swift */; };
+		5FDC336B4DBC6F95AF571522E7878924 /* SpanBuilderSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = B044E322E0BCA549A4256FDDCF250414 /* SpanBuilderSdk.swift */; };
+		6908EF16A72C2F096902ADC0CB5C6284 /* SplunkRum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118E51158B125062D7B9E22FCFC681E /* SplunkRum.swift */; };
+		6E522E192E0023F37CDA065EB41B7649 /* BinaryFormattable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923AE2D7EE3C1CA7AA1DAB699C5D79F7 /* BinaryFormattable.swift */; };
+		6F7A83E992E0E469C640B4183C36CAEA /* PropagatedSpanBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B010635B3661947EA386C43B662305F /* PropagatedSpanBuilder.swift */; };
+		6FF3EC289A21774F111F821B7A78BFA3 /* TraceId.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE740FA5A1446F9D3792B9F2E08C9D1E /* TraceId.swift */; };
+		705316BA49404F063658D1F5630A700A /* NetworkInstrumentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2224484D7B2844893C14ADC642635 /* NetworkInstrumentation.swift */; };
+		71E966422D74D75FBF5DD5CDBC00C23B /* BatchSpanProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F31D01557537912568D511D756357 /* BatchSpanProcessor.swift */; };
+		71F388D5B7E4EBBED3D1C4F5C7FED3E7 /* MultiSpanProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F6AA4E194FCAEA16E1979764D5993 /* MultiSpanProcessor.swift */; };
+		7E4039A6F8D70005EF442DE2F6DCF783 /* AttributesDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19D6FB5A671B1BCEB48A851BE11DDD /* AttributesDictionary.swift */; };
+		825C84F15AA770F86BCBD827EB1ADFBD /* webfunny_otel_ios_crashreporting-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D98EC8646745F5D6AACE54ECC8C81D1 /* webfunny_otel_ios_crashreporting-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8495258F34AD92288DB60D529383E103 /* EntryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A583A4FA7B83859E51BEFA1B1C2DC427 /* EntryKey.swift */; };
+		86F09E9236A430B9317DD39070F53D28 /* TextMapPropagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6536240A59A14F75736EFAF91E568DB /* TextMapPropagator.swift */; };
+		87186A58DFE0D04EA1AB0DECCE5AAB16 /* BaggageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D7702CF736265080A4AA31240C7C5 /* BaggageManager.swift */; };
+		881D6C66CF4FCD6F5978C8C4959F56D6 /* TracerProviderSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932B812BB2E69B862F3DF796894CD419 /* TracerProviderSdk.swift */; };
+		8B01485A5F0033714EDAFFE87F8AC27B /* ComponentRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970B71A3841C3B0DDD6899C1112E5F85 /* ComponentRegistry.swift */; };
+		8D82D5B602846E725C1D3305B9BA3DE3 /* SpanLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57968D6F79BECB35EF9EFC14EA868FE0 /* SpanLimits.swift */; };
+		8DF0EB1064EFEE4D995EC4B9760CAB1C /* AppStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462B69AAEEAE2370045A63EF67BE8E3 /* AppStart.swift */; };
+		8FECFCAD6D706296E4CED36610C8130E /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547F43534382B2AC40D07AB2BA64A584 /* NetworkUtils.swift */; };
+		9161467AF0EEA32896373B1D5525871E /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CB7AC64ED038A9D07DCC7021C5097C /* StringUtils.swift */; };
+		917BC1EBADA16F62D979DE9F16279A0D /* JaegerBaggagePropagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8868D8BED751D29C4848E51A464308EC /* JaegerBaggagePropagator.swift */; };
+		993259728426CA9CDEEC055BCADE6D2A /* NetworkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780AB5174C593FCA1A193E6E68639DDD /* NetworkType.swift */; };
+		9ABDE4D36283C5F757CCCE90E369803B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		9C736A891C3A1A12394E5B6499C08251 /* NoopSpanProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3E9C09BD5F3A7BC3692F27761378E9 /* NoopSpanProcessor.swift */; };
+		9EE7F887ED921F79201A381D88316114 /* TracestateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77173A1228FB259ADDEA8F78E2878B4B /* TracestateUtils.swift */; };
+		A14E834EF5BBA98E9A74A065E135530D /* DefaultBaggageManagerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C42E6F8BAC8873591D8DA26DF153F /* DefaultBaggageManagerProvider.swift */; };
+		A2FC820A4856A01C84052670A1C0A0F9 /* DefaultTracerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBCE5F494389CDC2B52A03E44C1977C /* DefaultTracerProvider.swift */; };
+		A3D4DD311B5BA9D4D843DF6EDB3F18B6 /* DeviceStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFF17CEB745A51E71CFD7E9F026585 /* DeviceStats.swift */; };
+		A402528973EE57BE4AD61061B5E476BA /* AppLifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408DFDB64CBDD1DB38C5392668C0ADFC /* AppLifecycle.swift */; };
+		A88D666392BA5D0E5A03373616F3A9EA /* DefaultBaggageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09297332ED2DE7B65C8C221C0923B41A /* DefaultBaggageManager.swift */; };
+		AA235C598DB82E8575F58A8E00C57434 /* InstrumentationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2648E8BB59BF594CBFBEB1F85BFE6 /* InstrumentationUtils.swift */; };
+		AC0CB6E431D2116C4EFC4E2153285EFB /* W3CTraceContextPropagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5223ED26830BEED7F84370107EC61A6D /* W3CTraceContextPropagator.swift */; };
+		AC48E00B259134CEF2B858D20575B1AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		ADDC56334412CA90EB94E66A77A33FD4 /* ArrayWithCapacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922288C33410E529702957154EBD55F1 /* ArrayWithCapacity.swift */; };
+		AE9C326566CE3A62752FB54D11F33824 /* PropagatedSpan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9540822EE0BFBC37EBEB7C5C2394F302 /* PropagatedSpan.swift */; };
+		AFE9B52841D11FE4DA53E007328EBADF /* SessionBasedSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496E2CCC13374E1D3758EDEAFB05834 /* SessionBasedSampler.swift */; };
+		B68DBEE0DFE080DAD8ABB1284960727D /* B3Propagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282F52C54C09DC0E13E96AAA0BAFE66 /* B3Propagator.swift */; };
+		B6D606E34957C335B752ABBDC4A1F39B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F348205AD70607D3B29F64F01C5E96D5 /* Device.swift */; };
+		B871CD23F64DEA96D3D8E89608AE9E0F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA704F14AE2767990C2BD30D06469 /* Log.swift */; };
+		B99CF3EF6C34740AA571112C6E083A99 /* SplunkRumBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B8EE073D203E3CCFE0A12B161C5913 /* SplunkRumBuilder.swift */; };
+		BAF027BEF5BB3F61360BB224203175FD /* TracerSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFBD1D6A5D8CF404B9DFE73209505ED /* TracerSdk.swift */; };
+		BDDF90EA81016A59916B5EFBCCA55BAE /* MultiSpanExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FD99B2D84043C9ADD7242777DD2D24 /* MultiSpanExporter.swift */; };
+		BE2C24975FBB9BC6EB44FC245A51FA1C /* EnvironmentContextPropagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C7C6E5B59BE62013EF5A39EDB7473 /* EnvironmentContextPropagator.swift */; };
+		C096B818FABD9882AE1C958473A4368D /* OpenTelemetryContextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A82E43BC0C83E83902930434FD833B8 /* OpenTelemetryContextProvider.swift */; };
+		C44AC8F99EA47CA4BF6C3BBF652C0E84 /* SlowFrameDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DF2F8243E97E3A138CD290FE9D3899 /* SlowFrameDetector.swift */; };
+		C8503B4A10587D52CB824E138519CAEF /* CrashReporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E864336E87658159D0AD52240B8054BD /* CrashReporting.swift */; };
+		CAB629336CDBDC0725C3A15346AE4DD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CB7BC4FA4CAB8FFA85176FD12FE36A1E /* SpanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD33B4EEB08B0DD2B95F2232D8E651 /* SpanData.swift */; };
+		CF9A3AEE0CD6C38DD46518CA3683E6E2 /* Pods-TestApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103CD957DD8674393C7E478D481EEC0 /* Pods-TestApp-dummy.m */; };
+		D016081A082232A56984626FEE6F75E2 /* RandomIdsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604B6BD2B8E29E52E0C13CCBC96D64E /* RandomIdsGenerator.swift */; };
+		D213E9E3915FFDD640C253E01273169D /* IdGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269E7317C72F98271F74A40CD0A5FBA1 /* IdGenerator.swift */; };
+		D25A1DE84E523E44A1D6E02494BAEF2F /* webfunny_otel_ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADF0301684AD7616A10412497AA83DD /* webfunny_otel_ios-dummy.m */; };
+		D41329F0ADB49C70F86B90E363EDB608 /* TracerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B81CA9EE75FB21A7C918DE7BFE607 /* TracerProvider.swift */; };
+		D53D4EC774DEE7298CB2FB9CA40F5B61 /* BaggageManagerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE56061E61EC9592857B270FCFA3EB0 /* BaggageManagerProvider.swift */; };
+		D6FA9B80B8C724E8B44BBB5AD2AC56F9 /* ZipkinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786C30A7352F4E85C6695E7C1F5240FB /* ZipkinAnnotation.swift */; };
+		D7B0DA3F25B1048B362D1F9533105E83 /* SpanKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658D33EC57EE426ABD996E86160BFA2D /* SpanKind.swift */; };
+		D87CC0A49AC890159F5636E34F5A7F87 /* WebViewInstrumentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E26CB65CC02FBDF3C314C0BE5E63AEE /* WebViewInstrumentation.swift */; };
+		DA043B7B434B577000E92BAB033B3A54 /* Span.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0129FC3E67FD8BFE7A1EAF477038D /* Span.swift */; };
+		DA167F23EFFE8EF10BCE3BEBB9185126 /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA29C1907168541FCEF3BBF3C38B2A6 /* ContextManager.swift */; };
+		DBBD7ECA7C5FB073AC91761E3AF87B4C /* ZipkinTraceExporterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFDD10CE61256D4B2FE7C06E0E8CD4C /* ZipkinTraceExporterOptions.swift */; };
+		DC26D5788EC1F75D37EABC0E2905A224 /* ErrorReporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA946DDFEA460BDEEB8B3268F9A73E5 /* ErrorReporting.swift */; };
+		DD7C944F4DF1280F250240A882335BE8 /* JaegerPropagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291BB36E9FDC5303E29BB4F431FF952B /* JaegerPropagator.swift */; };
+		E1157D44672693010C74797B4B0722A0 /* ZipkinTraceExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60DF86251357C8CD0F4AAC29DF88BD7 /* ZipkinTraceExporter.swift */; };
+		E27BE4E8641E392220F0B8BBF8953193 /* EntryMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79BFF737020378C1DAA301E4B76042B /* EntryMetadata.swift */; };
+		E48EBD69A03E308E0C207E1787283C18 /* EmptyBaggageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DF4965EB5E97BCC4725F9448057F53 /* EmptyBaggageBuilder.swift */; };
+		E5AA9ADA6F9DFB973DE4E2967154AEEB /* Baggage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE3EC23CE5C134A3337FBDB916591 /* Baggage.swift */; };
+		E8C24ED2952302F13CD095C3AA71FC0F /* ScreenName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5C3F59530C4441837F1BCC2B900FEC /* ScreenName.swift */; };
+		EC41AB8649C9930398F03D1980BAEA26 /* Samplers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF1A6AC20DB890F0C9BDF8BDFA9AC8 /* Samplers.swift */; };
+		EDBB63964A6EA68065D46F9E63DBEB8A /* ZipkinSpan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E68BA290433D6AE0DECD4F74E1B327 /* ZipkinSpan.swift */; };
+		EE391FAC25208B9298C478C84AA053BC /* StdoutExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648F8F9A2047C214BC713463272B0674 /* StdoutExporter.swift */; };
+		F00C7E8B7FFFC96A8C9D77420E0558AC /* SemanticAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E41DF406D86F26F9E8182AC807850B /* SemanticAttributes.swift */; };
+		F8DB0FCF2064571EBCC35F400B5C6AAD /* SpanContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADF8DE397BCFBB4A9BFA62BAB5BF589 /* SpanContext.swift */; };
+		F9A51F02CD648E014A07B7D101D5B9FB /* RecordEventsReadableSpan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F771F7C09BB278A422CB2B5E085ED2 /* RecordEventsReadableSpan.swift */; };
+		F9ABCE88F28BC8623A2B4FB00B3B5A40 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAD09764FD60733B0292CF4A5DB4094 /* Entry.swift */; };
+		FE4DA9F0BD4B93ABBC61BE35D85E1398 /* SpanId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780A587045217878737EC366D7CB5EC5 /* SpanId.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2438DFEF0ED786E08AF1F09A4594B3BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF637FEDCC44AC9971F1445C274C13CB;
+			remoteInfo = "PLCrashReporter-PLCrashReporter";
+		};
+		8DF9AE8CE8B5DE1358492CBC056611BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC826AA7E6DE3701BAC504C6B4ED1A6B;
+			remoteInfo = webfunny_otel_ios;
+		};
+		9F67B550F55F3D2EDB0F7F87207505CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC826AA7E6DE3701BAC504C6B4ED1A6B;
+			remoteInfo = webfunny_otel_ios;
+		};
+		A34583C8F08121A7ACCFF41DFCA3A140 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1BA693CD9FAD565B8D0956F1448B288;
+			remoteInfo = webfunny_otel_ios_crashreporting;
+		};
+		DFA3CBFFA674D572C6431221D8C94157 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D53C58097CCE41070956936598B94B4;
+			remoteInfo = PLCrashReporter;
+		};
+		F806129DC8D66FCF1BE960768EDD8C17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D53C58097CCE41070956936598B94B4;
+			remoteInfo = PLCrashReporter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04A47374DD98F092A34D2BF9B0A8A45E /* Pods-TestApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestApp.modulemap"; sourceTree = "<group>"; };
+		05B294F0E82F626DB9D1B3DC9DEC8EB0 /* BaggageBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaggageBuilder.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/BaggageBuilder.swift; sourceTree = "<group>"; };
+		076E458B2C446D254502BC2F1A832CA4 /* ResourceBundle-PLCrashReporter-PLCrashReporter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PLCrashReporter-PLCrashReporter-Info.plist"; sourceTree = "<group>"; };
+		087DE2E4E4147BE5A78E8CF486704F7D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = CrashReporter.xcframework/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		09297332ED2DE7B65C8C221C0923B41A /* DefaultBaggageManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultBaggageManager.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/DefaultBaggageManager.swift; sourceTree = "<group>"; };
+		0C439F422DDAA11C2F974547CEC34260 /* Pods-TestApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		141DDC52A896C38EBF9513E6C4CC20CB /* PLCrashReporter-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "PLCrashReporter-xcframeworks.sh"; sourceTree = "<group>"; };
+		1496E2CCC13374E1D3758EDEAFB05834 /* SessionBasedSampler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionBasedSampler.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/SessionBasedSampler.swift; sourceTree = "<group>"; };
+		14EB0D02989E3B27462A05F9E66DCD72 /* EntryValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EntryValue.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/EntryValue.swift; sourceTree = "<group>"; };
+		18A317912D2D995824E10C7D2D417979 /* SpanDb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpanDb.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/SpanDb.swift; sourceTree = "<group>"; };
+		1B3E9C09BD5F3A7BC3692F27761378E9 /* NoopSpanProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NoopSpanProcessor.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/SpanProcessors/NoopSpanProcessor.swift; sourceTree = "<group>"; };
+		1BA946DDFEA460BDEEB8B3268F9A73E5 /* ErrorReporting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorReporting.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/ErrorReporting.swift; sourceTree = "<group>"; };
+		1D5C3F59530C4441837F1BCC2B900FEC /* ScreenName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScreenName.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/ScreenName.swift; sourceTree = "<group>"; };
+		1E26CB65CC02FBDF3C314C0BE5E63AEE /* WebViewInstrumentation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebViewInstrumentation.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/WebViewInstrumentation.swift; sourceTree = "<group>"; };
+		21D639C4A639750A45C76E30154CE7F4 /* ZipkinConversionExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipkinConversionExtension.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/Exporters/Zipkin/Implementation/ZipkinConversionExtension.swift; sourceTree = "<group>"; };
+		220D05208E916BF42512A4771AAA885D /* MonotonicClock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MonotonicClock.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Internal/MonotonicClock.swift; sourceTree = "<group>"; };
+		24040951C6A1174531A6AEAB25AC72B2 /* LimitingExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LimitingExporter.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/LimitingExporter.swift; sourceTree = "<group>"; };
+		241C7C6E5B59BE62013EF5A39EDB7473 /* EnvironmentContextPropagator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnvironmentContextPropagator.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/Propagation/EnvironmentContextPropagator.swift; sourceTree = "<group>"; };
+		2441F6B57873AB6F290FDBEA075B1E40 /* webfunny_otel_ios_crashreporting-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "webfunny_otel_ios_crashreporting-prefix.pch"; sourceTree = "<group>"; };
+		269E7317C72F98271F74A40CD0A5FBA1 /* IdGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IdGenerator.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/IdGenerator.swift; sourceTree = "<group>"; };
+		27FE440D0FA7D2B4B4C4DA5190BF7B7B /* webfunny_otel_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = webfunny_otel_ios.debug.xcconfig; sourceTree = "<group>"; };
+		291BB36E9FDC5303E29BB4F431FF952B /* JaegerPropagator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JaegerPropagator.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/Propagation/JaegerPropagator.swift; sourceTree = "<group>"; };
+		29F771F7C09BB278A422CB2B5E085ED2 /* RecordEventsReadableSpan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecordEventsReadableSpan.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/RecordEventsReadableSpan.swift; sourceTree = "<group>"; };
+		2BBA15586CB45EDC80744FF8818D9D89 /* EnvVarResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnvVarResource.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Resources/EnvVarResource.swift; sourceTree = "<group>"; };
+		2EFDD10CE61256D4B2FE7C06E0E8CD4C /* ZipkinTraceExporterOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipkinTraceExporterOptions.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/Exporters/Zipkin/ZipkinTraceExporterOptions.swift; sourceTree = "<group>"; };
+		35CD4F3FB5ACD8EA7F120C45BAE99833 /* SwiftExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftExtensions.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Internal/SwiftExtensions.swift; sourceTree = "<group>"; };
+		37D2224484D7B2844893C14ADC642635 /* NetworkInstrumentation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkInstrumentation.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/NetworkInstrumentation.swift; sourceTree = "<group>"; };
+		37DC07EC202E8B498183DBBD533D6504 /* AttributeValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AttributeValue.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Common/AttributeValue.swift; sourceTree = "<group>"; };
+		38F420C97101F59D444BD71110297A9D /* SpanExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpanExporter.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/Export/SpanExporter.swift; sourceTree = "<group>"; };
+		3AA8DA6B9E524776DD252C2FA0D5BCD5 /* Sampler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sampler.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/Samplers/Sampler.swift; sourceTree = "<group>"; };
+		402BB917BCCAC24F452834DC7FE34972 /* SimpleSpanProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleSpanProcessor.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/SpanProcessors/SimpleSpanProcessor.swift; sourceTree = "<group>"; };
+		408DFDB64CBDD1DB38C5392668C0ADFC /* AppLifecycle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppLifecycle.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/AppLifecycle.swift; sourceTree = "<group>"; };
+		410D36EEC38821B49DCCDE60485174D1 /* webfunny_otel_ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "webfunny_otel_ios-prefix.pch"; sourceTree = "<group>"; };
+		42A5CDCE8D5087A2F26F3E732A1283F4 /* TracerProviderBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TracerProviderBuilder.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/TracerProviderBuilder.swift; sourceTree = "<group>"; };
+		42DF1A6AC20DB890F0C9BDF8BDFA9AC8 /* Samplers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Samplers.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/Samplers/Samplers.swift; sourceTree = "<group>"; };
+		4C9F31D01557537912568D511D756357 /* BatchSpanProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BatchSpanProcessor.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/SpanProcessors/BatchSpanProcessor.swift; sourceTree = "<group>"; };
+		4CEFCD6E95C3CD10C29C5BE2590BBBAF /* BandwidthTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BandwidthTracker.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/BandwidthTracker.swift; sourceTree = "<group>"; };
+		50D35DFEF4478DFB1A4161E0ED944AA6 /* CrashReporter.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = CrashReporter.xcframework; sourceTree = "<group>"; };
+		5103CD957DD8674393C7E478D481EEC0 /* Pods-TestApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestApp-dummy.m"; sourceTree = "<group>"; };
+		5223ED26830BEED7F84370107EC61A6D /* W3CTraceContextPropagator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = W3CTraceContextPropagator.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/Propagation/W3CTraceContextPropagator.swift; sourceTree = "<group>"; };
+		53F110A215F513A8CEA109C760D19EE0 /* TraceFlags.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TraceFlags.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/TraceFlags.swift; sourceTree = "<group>"; };
+		547F43534382B2AC40D07AB2BA64A584 /* NetworkUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkUtils.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/Exporters/Zipkin/Utils/NetworkUtils.swift; sourceTree = "<group>"; };
+		54DF292FDE2BEF0AFD5307FDA4F8A3C4 /* ZipkinEndpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipkinEndpoint.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/Exporters/Zipkin/Implementation/ZipkinEndpoint.swift; sourceTree = "<group>"; };
+		551AA704F14AE2767990C2BD30D06469 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/Log.swift; sourceTree = "<group>"; };
+		57968D6F79BECB35EF9EFC14EA868FE0 /* SpanLimits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpanLimits.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/SpanLimits.swift; sourceTree = "<group>"; };
+		5803B2B6C991F4F32DCAC75FD725185D /* Tracer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tracer.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/Tracer.swift; sourceTree = "<group>"; };
+		59BCA6836B1F5CA9FC078BEFC44D4580 /* ExportResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExportResult.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Common/ExportResult.swift; sourceTree = "<group>"; };
+		5A6D1EFEDD35D4DFEBC1E32CA64A3B44 /* Pods-TestApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestApp-Info.plist"; sourceTree = "<group>"; };
+		5B0076B010BF49F18938C4FBEEE4232A /* TracerSharedState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TracerSharedState.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/TracerSharedState.swift; sourceTree = "<group>"; };
+		5B4539419C6929CCBF6122F41D5E7B70 /* Locks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locks.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Internal/Locks.swift; sourceTree = "<group>"; };
+		5DFDC1CC757F353CCF66499ED6950B4A /* OpenTelemetry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenTelemetry.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/OpenTelemetry.swift; sourceTree = "<group>"; };
+		5E8B9DCACC9C6F92FB7AC672FEA54755 /* PLCrashReporter-PLCrashReporter */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "PLCrashReporter-PLCrashReporter"; path = PLCrashReporter.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		630D04ED6913B022A50F7C18384C5637 /* PLCrashReporter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PLCrashReporter.debug.xcconfig; sourceTree = "<group>"; };
+		6462B69AAEEAE2370045A63EF67BE8E3 /* AppStart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppStart.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/AppStart.swift; sourceTree = "<group>"; };
+		648F8F9A2047C214BC713463272B0674 /* StdoutExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StdoutExporter.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/Exporters/Stdout/StdoutExporter.swift; sourceTree = "<group>"; };
+		658D33EC57EE426ABD996E86160BFA2D /* SpanKind.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpanKind.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/SpanKind.swift; sourceTree = "<group>"; };
+		69CA8E4EDA9AF8BCB0732BC47C05D465 /* MillisClock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MillisClock.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Internal/MillisClock.swift; sourceTree = "<group>"; };
+		6A82E43BC0C83E83902930434FD833B8 /* OpenTelemetryContextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenTelemetryContextProvider.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Context/OpenTelemetryContextProvider.swift; sourceTree = "<group>"; };
+		6BBEC62D53429EFBC6B405B8C7FA472D /* DefaultBaggageBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultBaggageBuilder.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/DefaultBaggageBuilder.swift; sourceTree = "<group>"; };
+		6D98EC8646745F5D6AACE54ECC8C81D1 /* webfunny_otel_ios_crashreporting-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "webfunny_otel_ios_crashreporting-umbrella.h"; sourceTree = "<group>"; };
+		6E94283575B88569953EDC445267D4DE /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
+		6FFBD1D6A5D8CF404B9DFE73209505ED /* TracerSdk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TracerSdk.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/TracerSdk.swift; sourceTree = "<group>"; };
+		7000F980D1BBEC676B118FB1CC038A8E /* TraceState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TraceState.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/TraceState.swift; sourceTree = "<group>"; };
+		70E68BA290433D6AE0DECD4F74E1B327 /* ZipkinSpan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipkinSpan.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/Exporters/Zipkin/Implementation/ZipkinSpan.swift; sourceTree = "<group>"; };
+		71C4F84EDFC6F9D5FC84662615F36100 /* ActivityContextManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActivityContextManager.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Context/ActivityContextManager.swift; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		731C42E6F8BAC8873591D8DA26DF153F /* DefaultBaggageManagerProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultBaggageManagerProvider.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/DefaultBaggageManagerProvider.swift; sourceTree = "<group>"; };
+		733C1B2554BD1A2D4C77E8EE71088B65 /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		734A24563AB689F4B3DA9427CAD0A450 /* SpanToDiskExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpanToDiskExporter.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/SpanToDiskExporter.swift; sourceTree = "<group>"; };
+		75B8EE073D203E3CCFE0A12B161C5913 /* SplunkRumBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SplunkRumBuilder.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/SplunkRumBuilder.swift; sourceTree = "<group>"; };
+		77173A1228FB259ADDEA8F78E2878B4B /* TracestateUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TracestateUtils.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Internal/TracestateUtils.swift; sourceTree = "<group>"; };
+		780A587045217878737EC366D7CB5EC5 /* SpanId.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpanId.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/SpanId.swift; sourceTree = "<group>"; };
+		780AB5174C593FCA1A193E6E68639DDD /* NetworkType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkType.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/NetworkType.swift; sourceTree = "<group>"; };
+		7855B137FA6700D2A7E799A7FE3DE57B /* Pods-TestApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestApp-resources.sh"; sourceTree = "<group>"; };
+		786C30A7352F4E85C6695E7C1F5240FB /* ZipkinAnnotation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipkinAnnotation.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/Exporters/Zipkin/Implementation/ZipkinAnnotation.swift; sourceTree = "<group>"; };
+		78DF4965EB5E97BCC4725F9448057F53 /* EmptyBaggageBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmptyBaggageBuilder.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/EmptyBaggageBuilder.swift; sourceTree = "<group>"; };
+		78EF9DA8974D067379D4DA058D7C3047 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/Constants.swift; sourceTree = "<group>"; };
+		79A828AB46CC75B1B30B8A65CD2A18FB /* webfunny_otel_ios-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "webfunny_otel_ios-Info.plist"; sourceTree = "<group>"; };
+		7A8BB3216FDF57C34BE3F8FCDA775080 /* Pods-TestApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		7AB323137E7E8859BCFC4348B1303ACD /* ReadableSpan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReadableSpan.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/ReadableSpan.swift; sourceTree = "<group>"; };
+		7F4401AA848F0E02530712CB351B10EF /* webfunny_otel_ios_crashreporting-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "webfunny_otel_ios_crashreporting-Info.plist"; sourceTree = "<group>"; };
+		80DF2F8243E97E3A138CD290FE9D3899 /* SlowFrameDetector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlowFrameDetector.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/SlowFrameDetector.swift; sourceTree = "<group>"; };
+		8221EB1602BAFCB6879A4473A7B41863 /* Pods-TestApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestApp-umbrella.h"; sourceTree = "<group>"; };
+		86DFF17CEB745A51E71CFD7E9F026585 /* DeviceStats.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceStats.swift; path = SplunkRumCrashReporting/SplunkRumCrashReporting/DeviceStats.swift; sourceTree = "<group>"; };
+		8868D8BED751D29C4848E51A464308EC /* JaegerBaggagePropagator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JaegerBaggagePropagator.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/Propagation/JaegerBaggagePropagator.swift; sourceTree = "<group>"; };
+		8A7F6AA4E194FCAEA16E1979764D5993 /* MultiSpanProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultiSpanProcessor.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/SpanProcessors/MultiSpanProcessor.swift; sourceTree = "<group>"; };
+		8BA29C1907168541FCEF3BBF3C38B2A6 /* ContextManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContextManager.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Context/ContextManager.swift; sourceTree = "<group>"; };
+		8D1AAB47E9DC1CDBEFF849267BD90DC5 /* webfunny_otel_ios_crashreporting-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "webfunny_otel_ios_crashreporting-dummy.m"; sourceTree = "<group>"; };
+		903DDC4EAE6A61ED39E12B8942EB2BDB /* Clock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Clock.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Common/Clock.swift; sourceTree = "<group>"; };
+		913AD26249A21BB819D2EA566D97D5D1 /* ContextPropagators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContextPropagators.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Propagation/ContextPropagators.swift; sourceTree = "<group>"; };
+		922288C33410E529702957154EBD55F1 /* ArrayWithCapacity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayWithCapacity.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/ArrayWithCapacity.swift; sourceTree = "<group>"; };
+		923AE2D7EE3C1CA7AA1DAB699C5D79F7 /* BinaryFormattable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryFormattable.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/Propagation/BinaryFormattable.swift; sourceTree = "<group>"; };
+		932B812BB2E69B862F3DF796894CD419 /* TracerProviderSdk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TracerProviderSdk.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/TracerProviderSdk.swift; sourceTree = "<group>"; };
+		93432040B7E5D52A6B82F811DD3DFFF6 /* SpanFromDiskExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpanFromDiskExporter.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/SpanFromDiskExporter.swift; sourceTree = "<group>"; };
+		9540822EE0BFBC37EBEB7C5C2394F302 /* PropagatedSpan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PropagatedSpan.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/PropagatedSpan.swift; sourceTree = "<group>"; };
+		970B71A3841C3B0DDD6899C1112E5F85 /* ComponentRegistry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComponentRegistry.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Common/ComponentRegistry.swift; sourceTree = "<group>"; };
+		990D7702CF736265080A4AA31240C7C5 /* BaggageManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaggageManager.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/BaggageManager.swift; sourceTree = "<group>"; };
+		9ADF0301684AD7616A10412497AA83DD /* webfunny_otel_ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "webfunny_otel_ios-dummy.m"; sourceTree = "<group>"; };
+		9ADF8DE397BCFBB4A9BFA62BAB5BF589 /* SpanContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpanContext.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/SpanContext.swift; sourceTree = "<group>"; };
+		9B010635B3661947EA386C43B662305F /* PropagatedSpanBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PropagatedSpanBuilder.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/PropagatedSpanBuilder.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EB2F48AFDE12B1FA6A31308E942258C /* UIInstrumentation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIInstrumentation.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/UIInstrumentation.swift; sourceTree = "<group>"; };
+		9F5EF6439A6E08E9BA22F0BAF0EE75D6 /* SpanProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpanProcessor.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/SpanProcessor.swift; sourceTree = "<group>"; };
+		A0006D335C2BDF4A61CE9168AB2519B8 /* W3CBaggagePropagator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = W3CBaggagePropagator.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/Propagation/W3CBaggagePropagator.swift; sourceTree = "<group>"; };
+		A3FD9759AF42D57431CA4D6EBA27C8F7 /* RetryExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryExporter.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/RetryExporter.swift; sourceTree = "<group>"; };
+		A583A4FA7B83859E51BEFA1B1C2DC427 /* EntryKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EntryKey.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/EntryKey.swift; sourceTree = "<group>"; };
+		A5CA6D45AD4DB6F551F6C0660D54AB4E /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/Session.swift; sourceTree = "<group>"; };
+		A5FD99B2D84043C9ADD7242777DD2D24 /* MultiSpanExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultiSpanExporter.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/Export/MultiSpanExporter.swift; sourceTree = "<group>"; };
+		A6536240A59A14F75736EFAF91E568DB /* TextMapPropagator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextMapPropagator.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/Propagation/TextMapPropagator.swift; sourceTree = "<group>"; };
+		A79BFF737020378C1DAA301E4B76042B /* EntryMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EntryMetadata.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/EntryMetadata.swift; sourceTree = "<group>"; };
+		A7E41DF406D86F26F9E8182AC807850B /* SemanticAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SemanticAttributes.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/SemanticAttributes.swift; sourceTree = "<group>"; };
+		AAA2648E8BB59BF594CBFBEB1F85BFE6 /* InstrumentationUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InstrumentationUtils.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/InstrumentationUtils.swift; sourceTree = "<group>"; };
+		AB9942C47BB9F532AE5CB4E76F231039 /* InstrumentationLibraryInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InstrumentationLibraryInfo.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Common/InstrumentationLibraryInfo.swift; sourceTree = "<group>"; };
+		AD299CF09E0818FF0D911F2A29A1656F /* Status.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Status.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/Status.swift; sourceTree = "<group>"; };
+		ADAD09764FD60733B0292CF4A5DB4094 /* Entry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/Entry.swift; sourceTree = "<group>"; };
+		AE6B7EF8F9B25879BF23C4CD58062D97 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Resources/Resource.swift; sourceTree = "<group>"; };
+		B044E322E0BCA549A4256FDDCF250414 /* SpanBuilderSdk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpanBuilderSdk.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/SpanBuilderSdk.swift; sourceTree = "<group>"; };
+		B23BAC738FDFD403B06E8013436DCB72 /* webfunny_otel_ios */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = webfunny_otel_ios; path = webfunny_otel_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5192FEA43797C54044DECE4918CABAD /* SpanBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpanBuilder.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/SpanBuilder.swift; sourceTree = "<group>"; };
+		B5F7AB8CB51B9DBC48D744273EEAC80B /* webfunny_otel_ios_crashreporting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = webfunny_otel_ios_crashreporting.debug.xcconfig; sourceTree = "<group>"; };
+		B87F16C2CE38DC2ACEBA9061F9C815B6 /* webfunny_otel_ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "webfunny_otel_ios-umbrella.h"; sourceTree = "<group>"; };
+		BE740FA5A1446F9D3792B9F2E08C9D1E /* TraceId.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TraceId.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/TraceId.swift; sourceTree = "<group>"; };
+		C1C11C69353C010BE5DCC3BED049078B /* Pods-TestApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestApp-frameworks.sh"; sourceTree = "<group>"; };
+		C282F52C54C09DC0E13E96AAA0BAFE66 /* B3Propagator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = B3Propagator.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/Propagation/B3Propagator.swift; sourceTree = "<group>"; };
+		C72B81CA9EE75FB21A7C918DE7BFE607 /* TracerProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TracerProvider.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/TracerProvider.swift; sourceTree = "<group>"; };
+		C72F62F148B4B782E58FEFC63D7F9AC3 /* webfunny_otel_ios_crashreporting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = webfunny_otel_ios_crashreporting.release.xcconfig; sourceTree = "<group>"; };
+		CAE56061E61EC9592857B270FCFA3EB0 /* BaggageManagerProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaggageManagerProvider.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/BaggageManagerProvider.swift; sourceTree = "<group>"; };
+		CC19D6FB5A671B1BCEB48A851BE11DDD /* AttributesDictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AttributesDictionary.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/AttributesDictionary.swift; sourceTree = "<group>"; };
+		D0B91376A2475F861A61B6BA07FB91B6 /* ZipkinBaggagePropagator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipkinBaggagePropagator.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/Propagation/ZipkinBaggagePropagator.swift; sourceTree = "<group>"; };
+		D118E51158B125062D7B9E22FCFC681E /* SplunkRum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SplunkRum.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/SplunkRum.swift; sourceTree = "<group>"; };
+		D2C98FAF292C5530842D63DBD5F19F81 /* webfunny_otel_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = webfunny_otel_ios.release.xcconfig; sourceTree = "<group>"; };
+		D604B6BD2B8E29E52E0C13CCBC96D64E /* RandomIdsGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomIdsGenerator.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/RandomIdsGenerator.swift; sourceTree = "<group>"; };
+		D6CB7AC64ED038A9D07DCC7021C5097C /* StringUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringUtils.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Internal/StringUtils.swift; sourceTree = "<group>"; };
+		D71A1B7D33A0C36D3C0EE918DC4C693E /* webfunny_otel_ios_crashreporting */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = webfunny_otel_ios_crashreporting; path = webfunny_otel_ios_crashreporting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95DFB81A284E39B6A862A56A06F1DD6 /* TextMapBaggagePropagator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextMapBaggagePropagator.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/Propagation/TextMapBaggagePropagator.swift; sourceTree = "<group>"; };
+		DA4F1E11331C3E6FC8E62EC687EFCD76 /* ResourceAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResourceAttributes.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Resources/ResourceAttributes.swift; sourceTree = "<group>"; };
+		DD2BE3EC23CE5C134A3337FBDB916591 /* Baggage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Baggage.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/Baggage.swift; sourceTree = "<group>"; };
+		DEBCE5F494389CDC2B52A03E44C1977C /* DefaultTracerProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultTracerProvider.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/DefaultTracerProvider.swift; sourceTree = "<group>"; };
+		DFBD33B4EEB08B0DD2B95F2232D8E651 /* SpanData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpanData.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetrySdk/Trace/Data/SpanData.swift; sourceTree = "<group>"; };
+		E14A30498CD9D51D184C16AE82C53144 /* webfunny_otel_ios_crashreporting.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = webfunny_otel_ios_crashreporting.modulemap; sourceTree = "<group>"; };
+		E1F7C6872A03ADC697555239777C2431 /* DefaultBaggage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultBaggage.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/DefaultBaggage.swift; sourceTree = "<group>"; };
+		E2B0129FC3E67FD8BFE7A1EAF477038D /* Span.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Span.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/Span.swift; sourceTree = "<group>"; };
+		E537555010E35D7CDF9D7F38811C24DE /* Pods-TestApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TestApp"; path = Pods_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E662FA8AC793282009583BA7FC753EBA /* DefaultTracer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultTracer.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Trace/DefaultTracer.swift; sourceTree = "<group>"; };
+		E864336E87658159D0AD52240B8054BD /* CrashReporting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CrashReporting.swift; path = SplunkRumCrashReporting/SplunkRumCrashReporting/CrashReporting.swift; sourceTree = "<group>"; };
+		EDFF607D9CBACD0AF3AA49F155C885ED /* webfunny_otel_ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = webfunny_otel_ios.modulemap; sourceTree = "<group>"; };
+		EEBC7A0265E0ABB5341C65089FED647A /* PLCrashReporter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PLCrashReporter.release.xcconfig; sourceTree = "<group>"; };
+		F348205AD70607D3B29F64F01C5E96D5 /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/DeviceKit/Device.swift; sourceTree = "<group>"; };
+		F3E5FF455A4D4945E8EF30DB31AD16AD /* DefaultContextPropagators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultContextPropagators.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Propagation/DefaultContextPropagators.swift; sourceTree = "<group>"; };
+		F60DF86251357C8CD0F4AAC29DF88BD7 /* ZipkinTraceExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipkinTraceExporter.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/Exporters/Zipkin/ZipkinTraceExporter.swift; sourceTree = "<group>"; };
+		F6BA3CFE301A92D6BA9F1A5DF116C0D8 /* EmptyBaggage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmptyBaggage.swift; path = SplunkRumWorkspace/SplunkRum/SplunkRum/OpenTelemetry/OpenTelemetryApi/Baggage/EmptyBaggage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C03856EC1932F09E29E0140820D12AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC48E00B259134CEF2B858D20575B1AE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		543BBA4383B312690D150D40E7F0E096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ABDE4D36283C5F757CCCE90E369803B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		684A4D522AFE206D94F3FDC63F1ECCCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB629336CDBDC0725C3A15346AE4DD0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEBDF4CCBFDB3FBD710124C7EA4526BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		093735A21CC98ECBB922129769D0534D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E8B9DCACC9C6F92FB7AC672FEA54755 /* PLCrashReporter-PLCrashReporter */,
+				E537555010E35D7CDF9D7F38811C24DE /* Pods-TestApp */,
+				B23BAC738FDFD403B06E8013436DCB72 /* webfunny_otel_ios */,
+				D71A1B7D33A0C36D3C0EE918DC4C693E /* webfunny_otel_ios_crashreporting */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		498A69B7728447DEA49F5E2337E56E45 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				087DE2E4E4147BE5A78E8CF486704F7D /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		54D141135FDD3020BA116C1E979E80B8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE368C18C5F63DBD2CBDA41856785BEB /* Pods-TestApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6B3971E09B674EB18F97126D556CACD3 /* PLCrashReporter */ = {
+			isa = PBXGroup;
+			children = (
+				E1B3831D5A821ED283EC226131626D1D /* Frameworks */,
+				498A69B7728447DEA49F5E2337E56E45 /* Resources */,
+				6FAF913302D37E7C7D6CC12F83F13C73 /* Support Files */,
+			);
+			name = PLCrashReporter;
+			path = PLCrashReporter;
+			sourceTree = "<group>";
+		};
+		6EDE305829693FE43C3D09FCABAF5326 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B3971E09B674EB18F97126D556CACD3 /* PLCrashReporter */,
+				A929BC61F3808765922559DEDFF5CBA9 /* webfunny_otel_ios */,
+				CD78DF84F39628939C04A5C492499C6C /* webfunny_otel_ios_crashreporting */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6FAF913302D37E7C7D6CC12F83F13C73 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				141DDC52A896C38EBF9513E6C4CC20CB /* PLCrashReporter-xcframeworks.sh */,
+				630D04ED6913B022A50F7C18384C5637 /* PLCrashReporter.debug.xcconfig */,
+				EEBC7A0265E0ABB5341C65089FED647A /* PLCrashReporter.release.xcconfig */,
+				076E458B2C446D254502BC2F1A832CA4 /* ResourceBundle-PLCrashReporter-PLCrashReporter-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PLCrashReporter";
+			sourceTree = "<group>";
+		};
+		92103E95E3EAEE751D330133DFF22EA6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E14A30498CD9D51D184C16AE82C53144 /* webfunny_otel_ios_crashreporting.modulemap */,
+				8D1AAB47E9DC1CDBEFF849267BD90DC5 /* webfunny_otel_ios_crashreporting-dummy.m */,
+				7F4401AA848F0E02530712CB351B10EF /* webfunny_otel_ios_crashreporting-Info.plist */,
+				2441F6B57873AB6F290FDBEA075B1E40 /* webfunny_otel_ios_crashreporting-prefix.pch */,
+				6D98EC8646745F5D6AACE54ECC8C81D1 /* webfunny_otel_ios_crashreporting-umbrella.h */,
+				B5F7AB8CB51B9DBC48D744273EEAC80B /* webfunny_otel_ios_crashreporting.debug.xcconfig */,
+				C72F62F148B4B782E58FEFC63D7F9AC3 /* webfunny_otel_ios_crashreporting.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/webfunny_otel_ios_crashreporting";
+			sourceTree = "<group>";
+		};
+		A929BC61F3808765922559DEDFF5CBA9 /* webfunny_otel_ios */ = {
+			isa = PBXGroup;
+			children = (
+				71C4F84EDFC6F9D5FC84662615F36100 /* ActivityContextManager.swift */,
+				408DFDB64CBDD1DB38C5392668C0ADFC /* AppLifecycle.swift */,
+				6462B69AAEEAE2370045A63EF67BE8E3 /* AppStart.swift */,
+				922288C33410E529702957154EBD55F1 /* ArrayWithCapacity.swift */,
+				CC19D6FB5A671B1BCEB48A851BE11DDD /* AttributesDictionary.swift */,
+				37DC07EC202E8B498183DBBD533D6504 /* AttributeValue.swift */,
+				C282F52C54C09DC0E13E96AAA0BAFE66 /* B3Propagator.swift */,
+				DD2BE3EC23CE5C134A3337FBDB916591 /* Baggage.swift */,
+				05B294F0E82F626DB9D1B3DC9DEC8EB0 /* BaggageBuilder.swift */,
+				990D7702CF736265080A4AA31240C7C5 /* BaggageManager.swift */,
+				CAE56061E61EC9592857B270FCFA3EB0 /* BaggageManagerProvider.swift */,
+				4CEFCD6E95C3CD10C29C5BE2590BBBAF /* BandwidthTracker.swift */,
+				4C9F31D01557537912568D511D756357 /* BatchSpanProcessor.swift */,
+				923AE2D7EE3C1CA7AA1DAB699C5D79F7 /* BinaryFormattable.swift */,
+				903DDC4EAE6A61ED39E12B8942EB2BDB /* Clock.swift */,
+				970B71A3841C3B0DDD6899C1112E5F85 /* ComponentRegistry.swift */,
+				78EF9DA8974D067379D4DA058D7C3047 /* Constants.swift */,
+				8BA29C1907168541FCEF3BBF3C38B2A6 /* ContextManager.swift */,
+				913AD26249A21BB819D2EA566D97D5D1 /* ContextPropagators.swift */,
+				E1F7C6872A03ADC697555239777C2431 /* DefaultBaggage.swift */,
+				6BBEC62D53429EFBC6B405B8C7FA472D /* DefaultBaggageBuilder.swift */,
+				09297332ED2DE7B65C8C221C0923B41A /* DefaultBaggageManager.swift */,
+				731C42E6F8BAC8873591D8DA26DF153F /* DefaultBaggageManagerProvider.swift */,
+				F3E5FF455A4D4945E8EF30DB31AD16AD /* DefaultContextPropagators.swift */,
+				E662FA8AC793282009583BA7FC753EBA /* DefaultTracer.swift */,
+				DEBCE5F494389CDC2B52A03E44C1977C /* DefaultTracerProvider.swift */,
+				F348205AD70607D3B29F64F01C5E96D5 /* Device.swift */,
+				F6BA3CFE301A92D6BA9F1A5DF116C0D8 /* EmptyBaggage.swift */,
+				78DF4965EB5E97BCC4725F9448057F53 /* EmptyBaggageBuilder.swift */,
+				ADAD09764FD60733B0292CF4A5DB4094 /* Entry.swift */,
+				A583A4FA7B83859E51BEFA1B1C2DC427 /* EntryKey.swift */,
+				A79BFF737020378C1DAA301E4B76042B /* EntryMetadata.swift */,
+				14EB0D02989E3B27462A05F9E66DCD72 /* EntryValue.swift */,
+				241C7C6E5B59BE62013EF5A39EDB7473 /* EnvironmentContextPropagator.swift */,
+				2BBA15586CB45EDC80744FF8818D9D89 /* EnvVarResource.swift */,
+				1BA946DDFEA460BDEEB8B3268F9A73E5 /* ErrorReporting.swift */,
+				59BCA6836B1F5CA9FC078BEFC44D4580 /* ExportResult.swift */,
+				269E7317C72F98271F74A40CD0A5FBA1 /* IdGenerator.swift */,
+				AB9942C47BB9F532AE5CB4E76F231039 /* InstrumentationLibraryInfo.swift */,
+				AAA2648E8BB59BF594CBFBEB1F85BFE6 /* InstrumentationUtils.swift */,
+				8868D8BED751D29C4848E51A464308EC /* JaegerBaggagePropagator.swift */,
+				291BB36E9FDC5303E29BB4F431FF952B /* JaegerPropagator.swift */,
+				24040951C6A1174531A6AEAB25AC72B2 /* LimitingExporter.swift */,
+				5B4539419C6929CCBF6122F41D5E7B70 /* Locks.swift */,
+				551AA704F14AE2767990C2BD30D06469 /* Log.swift */,
+				69CA8E4EDA9AF8BCB0732BC47C05D465 /* MillisClock.swift */,
+				220D05208E916BF42512A4771AAA885D /* MonotonicClock.swift */,
+				A5FD99B2D84043C9ADD7242777DD2D24 /* MultiSpanExporter.swift */,
+				8A7F6AA4E194FCAEA16E1979764D5993 /* MultiSpanProcessor.swift */,
+				37D2224484D7B2844893C14ADC642635 /* NetworkInstrumentation.swift */,
+				780AB5174C593FCA1A193E6E68639DDD /* NetworkType.swift */,
+				547F43534382B2AC40D07AB2BA64A584 /* NetworkUtils.swift */,
+				1B3E9C09BD5F3A7BC3692F27761378E9 /* NoopSpanProcessor.swift */,
+				5DFDC1CC757F353CCF66499ED6950B4A /* OpenTelemetry.swift */,
+				6A82E43BC0C83E83902930434FD833B8 /* OpenTelemetryContextProvider.swift */,
+				9540822EE0BFBC37EBEB7C5C2394F302 /* PropagatedSpan.swift */,
+				9B010635B3661947EA386C43B662305F /* PropagatedSpanBuilder.swift */,
+				D604B6BD2B8E29E52E0C13CCBC96D64E /* RandomIdsGenerator.swift */,
+				7AB323137E7E8859BCFC4348B1303ACD /* ReadableSpan.swift */,
+				29F771F7C09BB278A422CB2B5E085ED2 /* RecordEventsReadableSpan.swift */,
+				AE6B7EF8F9B25879BF23C4CD58062D97 /* Resource.swift */,
+				DA4F1E11331C3E6FC8E62EC687EFCD76 /* ResourceAttributes.swift */,
+				A3FD9759AF42D57431CA4D6EBA27C8F7 /* RetryExporter.swift */,
+				3AA8DA6B9E524776DD252C2FA0D5BCD5 /* Sampler.swift */,
+				42DF1A6AC20DB890F0C9BDF8BDFA9AC8 /* Samplers.swift */,
+				1D5C3F59530C4441837F1BCC2B900FEC /* ScreenName.swift */,
+				A7E41DF406D86F26F9E8182AC807850B /* SemanticAttributes.swift */,
+				A5CA6D45AD4DB6F551F6C0660D54AB4E /* Session.swift */,
+				1496E2CCC13374E1D3758EDEAFB05834 /* SessionBasedSampler.swift */,
+				402BB917BCCAC24F452834DC7FE34972 /* SimpleSpanProcessor.swift */,
+				80DF2F8243E97E3A138CD290FE9D3899 /* SlowFrameDetector.swift */,
+				E2B0129FC3E67FD8BFE7A1EAF477038D /* Span.swift */,
+				B5192FEA43797C54044DECE4918CABAD /* SpanBuilder.swift */,
+				B044E322E0BCA549A4256FDDCF250414 /* SpanBuilderSdk.swift */,
+				9ADF8DE397BCFBB4A9BFA62BAB5BF589 /* SpanContext.swift */,
+				DFBD33B4EEB08B0DD2B95F2232D8E651 /* SpanData.swift */,
+				18A317912D2D995824E10C7D2D417979 /* SpanDb.swift */,
+				38F420C97101F59D444BD71110297A9D /* SpanExporter.swift */,
+				93432040B7E5D52A6B82F811DD3DFFF6 /* SpanFromDiskExporter.swift */,
+				780A587045217878737EC366D7CB5EC5 /* SpanId.swift */,
+				658D33EC57EE426ABD996E86160BFA2D /* SpanKind.swift */,
+				57968D6F79BECB35EF9EFC14EA868FE0 /* SpanLimits.swift */,
+				9F5EF6439A6E08E9BA22F0BAF0EE75D6 /* SpanProcessor.swift */,
+				734A24563AB689F4B3DA9427CAD0A450 /* SpanToDiskExporter.swift */,
+				D118E51158B125062D7B9E22FCFC681E /* SplunkRum.swift */,
+				75B8EE073D203E3CCFE0A12B161C5913 /* SplunkRumBuilder.swift */,
+				AD299CF09E0818FF0D911F2A29A1656F /* Status.swift */,
+				648F8F9A2047C214BC713463272B0674 /* StdoutExporter.swift */,
+				D6CB7AC64ED038A9D07DCC7021C5097C /* StringUtils.swift */,
+				35CD4F3FB5ACD8EA7F120C45BAE99833 /* SwiftExtensions.swift */,
+				D95DFB81A284E39B6A862A56A06F1DD6 /* TextMapBaggagePropagator.swift */,
+				A6536240A59A14F75736EFAF91E568DB /* TextMapPropagator.swift */,
+				53F110A215F513A8CEA109C760D19EE0 /* TraceFlags.swift */,
+				BE740FA5A1446F9D3792B9F2E08C9D1E /* TraceId.swift */,
+				5803B2B6C991F4F32DCAC75FD725185D /* Tracer.swift */,
+				C72B81CA9EE75FB21A7C918DE7BFE607 /* TracerProvider.swift */,
+				42A5CDCE8D5087A2F26F3E732A1283F4 /* TracerProviderBuilder.swift */,
+				932B812BB2E69B862F3DF796894CD419 /* TracerProviderSdk.swift */,
+				6FFBD1D6A5D8CF404B9DFE73209505ED /* TracerSdk.swift */,
+				5B0076B010BF49F18938C4FBEEE4232A /* TracerSharedState.swift */,
+				7000F980D1BBEC676B118FB1CC038A8E /* TraceState.swift */,
+				77173A1228FB259ADDEA8F78E2878B4B /* TracestateUtils.swift */,
+				9EB2F48AFDE12B1FA6A31308E942258C /* UIInstrumentation.swift */,
+				A0006D335C2BDF4A61CE9168AB2519B8 /* W3CBaggagePropagator.swift */,
+				5223ED26830BEED7F84370107EC61A6D /* W3CTraceContextPropagator.swift */,
+				1E26CB65CC02FBDF3C314C0BE5E63AEE /* WebViewInstrumentation.swift */,
+				786C30A7352F4E85C6695E7C1F5240FB /* ZipkinAnnotation.swift */,
+				D0B91376A2475F861A61B6BA07FB91B6 /* ZipkinBaggagePropagator.swift */,
+				21D639C4A639750A45C76E30154CE7F4 /* ZipkinConversionExtension.swift */,
+				54DF292FDE2BEF0AFD5307FDA4F8A3C4 /* ZipkinEndpoint.swift */,
+				70E68BA290433D6AE0DECD4F74E1B327 /* ZipkinSpan.swift */,
+				F60DF86251357C8CD0F4AAC29DF88BD7 /* ZipkinTraceExporter.swift */,
+				2EFDD10CE61256D4B2FE7C06E0E8CD4C /* ZipkinTraceExporterOptions.swift */,
+				DE5F8684E5E0C5BD23FE74907C815198 /* Support Files */,
+			);
+			name = webfunny_otel_ios;
+			path = webfunny_otel_ios;
+			sourceTree = "<group>";
+		};
+		AE368C18C5F63DBD2CBDA41856785BEB /* Pods-TestApp */ = {
+			isa = PBXGroup;
+			children = (
+				04A47374DD98F092A34D2BF9B0A8A45E /* Pods-TestApp.modulemap */,
+				0C439F422DDAA11C2F974547CEC34260 /* Pods-TestApp-acknowledgements.markdown */,
+				7A8BB3216FDF57C34BE3F8FCDA775080 /* Pods-TestApp-acknowledgements.plist */,
+				5103CD957DD8674393C7E478D481EEC0 /* Pods-TestApp-dummy.m */,
+				C1C11C69353C010BE5DCC3BED049078B /* Pods-TestApp-frameworks.sh */,
+				5A6D1EFEDD35D4DFEBC1E32CA64A3B44 /* Pods-TestApp-Info.plist */,
+				7855B137FA6700D2A7E799A7FE3DE57B /* Pods-TestApp-resources.sh */,
+				8221EB1602BAFCB6879A4473A7B41863 /* Pods-TestApp-umbrella.h */,
+				733C1B2554BD1A2D4C77E8EE71088B65 /* Pods-TestApp.debug.xcconfig */,
+				6E94283575B88569953EDC445267D4DE /* Pods-TestApp.release.xcconfig */,
+			);
+			name = "Pods-TestApp";
+			path = "Target Support Files/Pods-TestApp";
+			sourceTree = "<group>";
+		};
+		CD78DF84F39628939C04A5C492499C6C /* webfunny_otel_ios_crashreporting */ = {
+			isa = PBXGroup;
+			children = (
+				E864336E87658159D0AD52240B8054BD /* CrashReporting.swift */,
+				86DFF17CEB745A51E71CFD7E9F026585 /* DeviceStats.swift */,
+				92103E95E3EAEE751D330133DFF22EA6 /* Support Files */,
+			);
+			name = webfunny_otel_ios_crashreporting;
+			path = webfunny_otel_ios_crashreporting;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				6EDE305829693FE43C3D09FCABAF5326 /* Pods */,
+				093735A21CC98ECBB922129769D0534D /* Products */,
+				54D141135FDD3020BA116C1E979E80B8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE5F8684E5E0C5BD23FE74907C815198 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDFF607D9CBACD0AF3AA49F155C885ED /* webfunny_otel_ios.modulemap */,
+				9ADF0301684AD7616A10412497AA83DD /* webfunny_otel_ios-dummy.m */,
+				79A828AB46CC75B1B30B8A65CD2A18FB /* webfunny_otel_ios-Info.plist */,
+				410D36EEC38821B49DCCDE60485174D1 /* webfunny_otel_ios-prefix.pch */,
+				B87F16C2CE38DC2ACEBA9061F9C815B6 /* webfunny_otel_ios-umbrella.h */,
+				27FE440D0FA7D2B4B4C4DA5190BF7B7B /* webfunny_otel_ios.debug.xcconfig */,
+				D2C98FAF292C5530842D63DBD5F19F81 /* webfunny_otel_ios.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/webfunny_otel_ios";
+			sourceTree = "<group>";
+		};
+		E1B3831D5A821ED283EC226131626D1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50D35DFEF4478DFB1A4161E0ED944AA6 /* CrashReporter.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		357E41C4B91B445CDC0837FA1DB0030B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CCE1FC440869963EF93A802FE081659 /* Pods-TestApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6795EE1B55D12438CCFE7B44C310B21F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				825C84F15AA770F86BCBD827EB1ADFBD /* webfunny_otel_ios_crashreporting-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82359E6D669764735AE1F4B8B202826C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAB159D6F32CE57CFF4DD7EC4865576 /* webfunny_otel_ios-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BC826AA7E6DE3701BAC504C6B4ED1A6B /* webfunny_otel_ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D24001E24BD68B09E61F20B3F4B15149 /* Build configuration list for PBXNativeTarget "webfunny_otel_ios" */;
+			buildPhases = (
+				82359E6D669764735AE1F4B8B202826C /* Headers */,
+				34375CEE7D6F843B5C8252F6123033EA /* Sources */,
+				4C03856EC1932F09E29E0140820D12AA /* Frameworks */,
+				58ED62959740C66062DD6E9BB44B3C4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = webfunny_otel_ios;
+			productName = webfunny_otel_ios;
+			productReference = B23BAC738FDFD403B06E8013436DCB72 /* webfunny_otel_ios */;
+			productType = "com.apple.product-type.framework";
+		};
+		CDFBFBA537A3451DF3B07484C1A6929D /* Pods-TestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF3ADA9AA4F1F079DB08BD845652D733 /* Build configuration list for PBXNativeTarget "Pods-TestApp" */;
+			buildPhases = (
+				357E41C4B91B445CDC0837FA1DB0030B /* Headers */,
+				E1629241E23746F91530682217CF18CC /* Sources */,
+				543BBA4383B312690D150D40E7F0E096 /* Frameworks */,
+				14B55A9ABE83DF7672A91777827737DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				507D2CDF8D38BC1417876AAD367786DE /* PBXTargetDependency */,
+				A248F1799ECFE73E18B427D09B0FA053 /* PBXTargetDependency */,
+				8392CA2F25971C932A3925EC4052E2A8 /* PBXTargetDependency */,
+			);
+			name = "Pods-TestApp";
+			productName = Pods_TestApp;
+			productReference = E537555010E35D7CDF9D7F38811C24DE /* Pods-TestApp */;
+			productType = "com.apple.product-type.framework";
+		};
+		EF637FEDCC44AC9971F1445C274C13CB /* PLCrashReporter-PLCrashReporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F731CC9A7F74A8BB949E54F80A50363 /* Build configuration list for PBXNativeTarget "PLCrashReporter-PLCrashReporter" */;
+			buildPhases = (
+				D08182D0D8A0B9D04188C734CB059983 /* Sources */,
+				AEBDF4CCBFDB3FBD710124C7EA4526BF /* Frameworks */,
+				AB0D366E2C1815D89E6B39BC886506B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PLCrashReporter-PLCrashReporter";
+			productName = PLCrashReporter;
+			productReference = 5E8B9DCACC9C6F92FB7AC672FEA54755 /* PLCrashReporter-PLCrashReporter */;
+			productType = "com.apple.product-type.bundle";
+		};
+		F1BA693CD9FAD565B8D0956F1448B288 /* webfunny_otel_ios_crashreporting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B50928B417B759611316D602EEFC868 /* Build configuration list for PBXNativeTarget "webfunny_otel_ios_crashreporting" */;
+			buildPhases = (
+				6795EE1B55D12438CCFE7B44C310B21F /* Headers */,
+				36798FEA6C609A3C2FA4E4EEB253B652 /* Sources */,
+				684A4D522AFE206D94F3FDC63F1ECCCC /* Frameworks */,
+				88B8848392E22A410B7DA25397AD32D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1283C1F2C59CD2450C2D1677BF0E7D1F /* PBXTargetDependency */,
+				55146612CF795129F91BB64E8BF3A973 /* PBXTargetDependency */,
+			);
+			name = webfunny_otel_ios_crashreporting;
+			productName = webfunny_otel_ios_crashreporting;
+			productReference = D71A1B7D33A0C36D3C0EE918DC4C693E /* webfunny_otel_ios_crashreporting */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 093735A21CC98ECBB922129769D0534D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D53C58097CCE41070956936598B94B4 /* PLCrashReporter */,
+				EF637FEDCC44AC9971F1445C274C13CB /* PLCrashReporter-PLCrashReporter */,
+				CDFBFBA537A3451DF3B07484C1A6929D /* Pods-TestApp */,
+				BC826AA7E6DE3701BAC504C6B4ED1A6B /* webfunny_otel_ios */,
+				F1BA693CD9FAD565B8D0956F1448B288 /* webfunny_otel_ios_crashreporting */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14B55A9ABE83DF7672A91777827737DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58ED62959740C66062DD6E9BB44B3C4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88B8848392E22A410B7DA25397AD32D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB0D366E2C1815D89E6B39BC886506B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51F2DACEE242AFA58C8777C8D4887C35 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AFEB3AD5881535B0460419DF1BF864B0 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/PLCrashReporter/PLCrashReporter-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/PLCrashReporter/PLCrashReporter-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/PLCrashReporter/PLCrashReporter-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34375CEE7D6F843B5C8252F6123033EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DFBB3E17194204851C187AE6D631B52 /* ActivityContextManager.swift in Sources */,
+				A402528973EE57BE4AD61061B5E476BA /* AppLifecycle.swift in Sources */,
+				8DF0EB1064EFEE4D995EC4B9760CAB1C /* AppStart.swift in Sources */,
+				ADDC56334412CA90EB94E66A77A33FD4 /* ArrayWithCapacity.swift in Sources */,
+				7E4039A6F8D70005EF442DE2F6DCF783 /* AttributesDictionary.swift in Sources */,
+				3FB3DBE110ABEF9E587D2F53A69781BF /* AttributeValue.swift in Sources */,
+				B68DBEE0DFE080DAD8ABB1284960727D /* B3Propagator.swift in Sources */,
+				E5AA9ADA6F9DFB973DE4E2967154AEEB /* Baggage.swift in Sources */,
+				5A715419F9E6D11FB0B1DF310FA09489 /* BaggageBuilder.swift in Sources */,
+				87186A58DFE0D04EA1AB0DECCE5AAB16 /* BaggageManager.swift in Sources */,
+				D53D4EC774DEE7298CB2FB9CA40F5B61 /* BaggageManagerProvider.swift in Sources */,
+				0ED871C95913E6436D16829239C5D05A /* BandwidthTracker.swift in Sources */,
+				71E966422D74D75FBF5DD5CDBC00C23B /* BatchSpanProcessor.swift in Sources */,
+				6E522E192E0023F37CDA065EB41B7649 /* BinaryFormattable.swift in Sources */,
+				485CBF9D7B2C08E9761844904B0A5393 /* Clock.swift in Sources */,
+				8B01485A5F0033714EDAFFE87F8AC27B /* ComponentRegistry.swift in Sources */,
+				4D71D04BCA3C1868B06DB47D3F225869 /* Constants.swift in Sources */,
+				DA167F23EFFE8EF10BCE3BEBB9185126 /* ContextManager.swift in Sources */,
+				047613413D0DA0238784577E8AF6E0D8 /* ContextPropagators.swift in Sources */,
+				167A2506B23ECD6DD0CB231E6E732D06 /* DefaultBaggage.swift in Sources */,
+				5FA60BCA9876EA29E45892417F9D1ED6 /* DefaultBaggageBuilder.swift in Sources */,
+				A88D666392BA5D0E5A03373616F3A9EA /* DefaultBaggageManager.swift in Sources */,
+				A14E834EF5BBA98E9A74A065E135530D /* DefaultBaggageManagerProvider.swift in Sources */,
+				365094213F1B9DF33DBA5C398D63FED0 /* DefaultContextPropagators.swift in Sources */,
+				33E1D9B4AB2E83A914C8535912C6D1D8 /* DefaultTracer.swift in Sources */,
+				A2FC820A4856A01C84052670A1C0A0F9 /* DefaultTracerProvider.swift in Sources */,
+				B6D606E34957C335B752ABBDC4A1F39B /* Device.swift in Sources */,
+				15335C3C755FE7154674C18531B9B170 /* EmptyBaggage.swift in Sources */,
+				E48EBD69A03E308E0C207E1787283C18 /* EmptyBaggageBuilder.swift in Sources */,
+				F9ABCE88F28BC8623A2B4FB00B3B5A40 /* Entry.swift in Sources */,
+				8495258F34AD92288DB60D529383E103 /* EntryKey.swift in Sources */,
+				E27BE4E8641E392220F0B8BBF8953193 /* EntryMetadata.swift in Sources */,
+				4449393DD833BB46BDBD37167FE46BB0 /* EntryValue.swift in Sources */,
+				BE2C24975FBB9BC6EB44FC245A51FA1C /* EnvironmentContextPropagator.swift in Sources */,
+				37544FA2DD9F04390410992A875AF6A5 /* EnvVarResource.swift in Sources */,
+				DC26D5788EC1F75D37EABC0E2905A224 /* ErrorReporting.swift in Sources */,
+				1602E3F91591A6F88C87A9B54A0756C9 /* ExportResult.swift in Sources */,
+				D213E9E3915FFDD640C253E01273169D /* IdGenerator.swift in Sources */,
+				110F88110ADC5F21CB3370999CCF5C99 /* InstrumentationLibraryInfo.swift in Sources */,
+				AA235C598DB82E8575F58A8E00C57434 /* InstrumentationUtils.swift in Sources */,
+				917BC1EBADA16F62D979DE9F16279A0D /* JaegerBaggagePropagator.swift in Sources */,
+				DD7C944F4DF1280F250240A882335BE8 /* JaegerPropagator.swift in Sources */,
+				4EDA0DF4031210DD75C7102593C7D955 /* LimitingExporter.swift in Sources */,
+				569BCE41CAD702A73D38F1827DBC0EFD /* Locks.swift in Sources */,
+				B871CD23F64DEA96D3D8E89608AE9E0F /* Log.swift in Sources */,
+				1A6DDFAE5E5387374DC56239742A683A /* MillisClock.swift in Sources */,
+				2135243A829306B9C4202E64C774AD34 /* MonotonicClock.swift in Sources */,
+				BDDF90EA81016A59916B5EFBCCA55BAE /* MultiSpanExporter.swift in Sources */,
+				71F388D5B7E4EBBED3D1C4F5C7FED3E7 /* MultiSpanProcessor.swift in Sources */,
+				705316BA49404F063658D1F5630A700A /* NetworkInstrumentation.swift in Sources */,
+				993259728426CA9CDEEC055BCADE6D2A /* NetworkType.swift in Sources */,
+				8FECFCAD6D706296E4CED36610C8130E /* NetworkUtils.swift in Sources */,
+				9C736A891C3A1A12394E5B6499C08251 /* NoopSpanProcessor.swift in Sources */,
+				3C3545FB6D1432369E5E519B177CBE82 /* OpenTelemetry.swift in Sources */,
+				C096B818FABD9882AE1C958473A4368D /* OpenTelemetryContextProvider.swift in Sources */,
+				AE9C326566CE3A62752FB54D11F33824 /* PropagatedSpan.swift in Sources */,
+				6F7A83E992E0E469C640B4183C36CAEA /* PropagatedSpanBuilder.swift in Sources */,
+				D016081A082232A56984626FEE6F75E2 /* RandomIdsGenerator.swift in Sources */,
+				25865A673C9226725B23AD8DA3708E4E /* ReadableSpan.swift in Sources */,
+				F9A51F02CD648E014A07B7D101D5B9FB /* RecordEventsReadableSpan.swift in Sources */,
+				4FE1A3B426F7F2DDA971924FE275085F /* Resource.swift in Sources */,
+				53D1E8D79F6A7E87F125428C84691850 /* ResourceAttributes.swift in Sources */,
+				080ED69C93FF07D90E71AAC0F78697A4 /* RetryExporter.swift in Sources */,
+				0E11DB2CB2BCD18C2330A422AACD409E /* Sampler.swift in Sources */,
+				EC41AB8649C9930398F03D1980BAEA26 /* Samplers.swift in Sources */,
+				E8C24ED2952302F13CD095C3AA71FC0F /* ScreenName.swift in Sources */,
+				F00C7E8B7FFFC96A8C9D77420E0558AC /* SemanticAttributes.swift in Sources */,
+				4F5423E0D1585A84C7B45C099132D4A6 /* Session.swift in Sources */,
+				AFE9B52841D11FE4DA53E007328EBADF /* SessionBasedSampler.swift in Sources */,
+				5FD6E695661BC3ACFE9F23FA7D0DBD19 /* SimpleSpanProcessor.swift in Sources */,
+				C44AC8F99EA47CA4BF6C3BBF652C0E84 /* SlowFrameDetector.swift in Sources */,
+				DA043B7B434B577000E92BAB033B3A54 /* Span.swift in Sources */,
+				012C3399C5D428F71E9D37C4973C7D18 /* SpanBuilder.swift in Sources */,
+				5FDC336B4DBC6F95AF571522E7878924 /* SpanBuilderSdk.swift in Sources */,
+				F8DB0FCF2064571EBCC35F400B5C6AAD /* SpanContext.swift in Sources */,
+				CB7BC4FA4CAB8FFA85176FD12FE36A1E /* SpanData.swift in Sources */,
+				3F221AB3022F700EA90C2B4F0EA15A96 /* SpanDb.swift in Sources */,
+				5AC51CF968724F98F1D59053A3CC0F09 /* SpanExporter.swift in Sources */,
+				17DBAB4A97F24713B3576EF77B489F5A /* SpanFromDiskExporter.swift in Sources */,
+				FE4DA9F0BD4B93ABBC61BE35D85E1398 /* SpanId.swift in Sources */,
+				D7B0DA3F25B1048B362D1F9533105E83 /* SpanKind.swift in Sources */,
+				8D82D5B602846E725C1D3305B9BA3DE3 /* SpanLimits.swift in Sources */,
+				094026CCEB0CC08F2BF008BB5E1D4324 /* SpanProcessor.swift in Sources */,
+				1947D31B9ACF324C11C2FCA3267987D1 /* SpanToDiskExporter.swift in Sources */,
+				6908EF16A72C2F096902ADC0CB5C6284 /* SplunkRum.swift in Sources */,
+				B99CF3EF6C34740AA571112C6E083A99 /* SplunkRumBuilder.swift in Sources */,
+				367CE1845D4FCBF8291C991A8E696A82 /* Status.swift in Sources */,
+				EE391FAC25208B9298C478C84AA053BC /* StdoutExporter.swift in Sources */,
+				9161467AF0EEA32896373B1D5525871E /* StringUtils.swift in Sources */,
+				4F1B45273BF7CAF4775B21BC79B109CF /* SwiftExtensions.swift in Sources */,
+				3D53E19C32CF2C96317816D8FCD191E2 /* TextMapBaggagePropagator.swift in Sources */,
+				86F09E9236A430B9317DD39070F53D28 /* TextMapPropagator.swift in Sources */,
+				42F202BF1F6DDB45607F39F705248985 /* TraceFlags.swift in Sources */,
+				6FF3EC289A21774F111F821B7A78BFA3 /* TraceId.swift in Sources */,
+				4A8941436BB9030201F8C3F05B163B59 /* Tracer.swift in Sources */,
+				D41329F0ADB49C70F86B90E363EDB608 /* TracerProvider.swift in Sources */,
+				210E7A954417AEE20CEE193B79E0ECF7 /* TracerProviderBuilder.swift in Sources */,
+				881D6C66CF4FCD6F5978C8C4959F56D6 /* TracerProviderSdk.swift in Sources */,
+				BAF027BEF5BB3F61360BB224203175FD /* TracerSdk.swift in Sources */,
+				298E386D3EF04E7E650A34A6929E1EAC /* TracerSharedState.swift in Sources */,
+				1527C743B670AFA694A9D7736E7100DE /* TraceState.swift in Sources */,
+				9EE7F887ED921F79201A381D88316114 /* TracestateUtils.swift in Sources */,
+				5C0911B5A53BC3AEFCD414CE28C44E71 /* UIInstrumentation.swift in Sources */,
+				3D758C0B4CEDCC29B7EE357EA7D1E457 /* W3CBaggagePropagator.swift in Sources */,
+				AC0CB6E431D2116C4EFC4E2153285EFB /* W3CTraceContextPropagator.swift in Sources */,
+				D25A1DE84E523E44A1D6E02494BAEF2F /* webfunny_otel_ios-dummy.m in Sources */,
+				D87CC0A49AC890159F5636E34F5A7F87 /* WebViewInstrumentation.swift in Sources */,
+				D6FA9B80B8C724E8B44BBB5AD2AC56F9 /* ZipkinAnnotation.swift in Sources */,
+				2DC5F8A821CCE887F7D890794490663A /* ZipkinBaggagePropagator.swift in Sources */,
+				5D84D697669CBAB3B707505A8D1458D7 /* ZipkinConversionExtension.swift in Sources */,
+				5260117942048C6736E1F0E0680FAC41 /* ZipkinEndpoint.swift in Sources */,
+				EDBB63964A6EA68065D46F9E63DBEB8A /* ZipkinSpan.swift in Sources */,
+				E1157D44672693010C74797B4B0722A0 /* ZipkinTraceExporter.swift in Sources */,
+				DBBD7ECA7C5FB073AC91761E3AF87B4C /* ZipkinTraceExporterOptions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36798FEA6C609A3C2FA4E4EEB253B652 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8503B4A10587D52CB824E138519CAEF /* CrashReporting.swift in Sources */,
+				A3D4DD311B5BA9D4D843DF6EDB3F18B6 /* DeviceStats.swift in Sources */,
+				2D22C6D06B991B70440FB8936C307CE1 /* webfunny_otel_ios_crashreporting-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D08182D0D8A0B9D04188C734CB059983 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1629241E23746F91530682217CF18CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF9A3AEE0CD6C38DD46518CA3683E6E2 /* Pods-TestApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1283C1F2C59CD2450C2D1677BF0E7D1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PLCrashReporter;
+			target = 8D53C58097CCE41070956936598B94B4 /* PLCrashReporter */;
+			targetProxy = DFA3CBFFA674D572C6431221D8C94157 /* PBXContainerItemProxy */;
+		};
+		507D2CDF8D38BC1417876AAD367786DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PLCrashReporter;
+			target = 8D53C58097CCE41070956936598B94B4 /* PLCrashReporter */;
+			targetProxy = F806129DC8D66FCF1BE960768EDD8C17 /* PBXContainerItemProxy */;
+		};
+		55146612CF795129F91BB64E8BF3A973 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = webfunny_otel_ios;
+			target = BC826AA7E6DE3701BAC504C6B4ED1A6B /* webfunny_otel_ios */;
+			targetProxy = 9F67B550F55F3D2EDB0F7F87207505CF /* PBXContainerItemProxy */;
+		};
+		8392CA2F25971C932A3925EC4052E2A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = webfunny_otel_ios_crashreporting;
+			target = F1BA693CD9FAD565B8D0956F1448B288 /* webfunny_otel_ios_crashreporting */;
+			targetProxy = A34583C8F08121A7ACCFF41DFCA3A140 /* PBXContainerItemProxy */;
+		};
+		A248F1799ECFE73E18B427D09B0FA053 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = webfunny_otel_ios;
+			target = BC826AA7E6DE3701BAC504C6B4ED1A6B /* webfunny_otel_ios */;
+			targetProxy = 8DF9AE8CE8B5DE1358492CBC056611BB /* PBXContainerItemProxy */;
+		};
+		F41E1F1356F6EC18DD27C53EB331E44C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PLCrashReporter-PLCrashReporter";
+			target = EF637FEDCC44AC9971F1445C274C13CB /* PLCrashReporter-PLCrashReporter */;
+			targetProxy = 2438DFEF0ED786E08AF1F09A4594B3BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A7B6F17E00A2FA38BA16431F149EBE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEBC7A0265E0ABB5341C65089FED647A /* PLCrashReporter.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PLCrashReporter";
+				IBSC_MODULE = PLCrashReporter;
+				INFOPLIST_FILE = "Target Support Files/PLCrashReporter/ResourceBundle-PLCrashReporter-PLCrashReporter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = PLCrashReporter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		18DDE60C91FACD37F432A382B996757A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEBC7A0265E0ABB5341C65089FED647A /* PLCrashReporter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27BD8542AD35A336075FFA81A8098FD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E94283575B88569953EDC445267D4DE /* Pods-TestApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TestApp/Pods-TestApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TestApp/Pods-TestApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		48D406E4187C0F6B821092FD24D7C343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C72F62F148B4B782E58FEFC63D7F9AC3 /* webfunny_otel_ios_crashreporting.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/webfunny_otel_ios_crashreporting/webfunny_otel_ios_crashreporting-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/webfunny_otel_ios_crashreporting/webfunny_otel_ios_crashreporting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/webfunny_otel_ios_crashreporting/webfunny_otel_ios_crashreporting.modulemap";
+				PRODUCT_MODULE_NAME = webfunny_otel_ios_crashreporting;
+				PRODUCT_NAME = webfunny_otel_ios_crashreporting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8CCF54E1C549AD1D85FF3F7CCB149A6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 630D04ED6913B022A50F7C18384C5637 /* PLCrashReporter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		9A7BD584EF65571EB0DAC683757CCA82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27FE440D0FA7D2B4B4C4DA5190BF7B7B /* webfunny_otel_ios.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/webfunny_otel_ios/webfunny_otel_ios-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/webfunny_otel_ios/webfunny_otel_ios-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/webfunny_otel_ios/webfunny_otel_ios.modulemap";
+				PRODUCT_MODULE_NAME = webfunny_otel_ios;
+				PRODUCT_NAME = webfunny_otel_ios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B62E3D7494EFAFC58F791287B24DDE88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 630D04ED6913B022A50F7C18384C5637 /* PLCrashReporter.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PLCrashReporter";
+				IBSC_MODULE = PLCrashReporter;
+				INFOPLIST_FILE = "Target Support Files/PLCrashReporter/ResourceBundle-PLCrashReporter-PLCrashReporter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = PLCrashReporter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B792E26B9B01AAA176D6248B93E89BA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5F7AB8CB51B9DBC48D744273EEAC80B /* webfunny_otel_ios_crashreporting.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/webfunny_otel_ios_crashreporting/webfunny_otel_ios_crashreporting-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/webfunny_otel_ios_crashreporting/webfunny_otel_ios_crashreporting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/webfunny_otel_ios_crashreporting/webfunny_otel_ios_crashreporting.modulemap";
+				PRODUCT_MODULE_NAME = webfunny_otel_ios_crashreporting;
+				PRODUCT_NAME = webfunny_otel_ios_crashreporting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D850140782977E2953B5339E9D8B36EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 733C1B2554BD1A2D4C77E8EE71088B65 /* Pods-TestApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TestApp/Pods-TestApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TestApp/Pods-TestApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E28421371452B46E1577944A52464B0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2C98FAF292C5530842D63DBD5F19F81 /* webfunny_otel_ios.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/webfunny_otel_ios/webfunny_otel_ios-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/webfunny_otel_ios/webfunny_otel_ios-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/webfunny_otel_ios/webfunny_otel_ios.modulemap";
+				PRODUCT_MODULE_NAME = webfunny_otel_ios;
+				PRODUCT_NAME = webfunny_otel_ios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		066D56F74583C15073A6C0D58DCEA4A0 /* Build configuration list for PBXAggregateTarget "PLCrashReporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CCF54E1C549AD1D85FF3F7CCB149A6D /* Debug */,
+				18DDE60C91FACD37F432A382B996757A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B50928B417B759611316D602EEFC868 /* Build configuration list for PBXNativeTarget "webfunny_otel_ios_crashreporting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B792E26B9B01AAA176D6248B93E89BA4 /* Debug */,
+				48D406E4187C0F6B821092FD24D7C343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */,
+				903A0004D3E6651EFD5D2E16214D101B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F731CC9A7F74A8BB949E54F80A50363 /* Build configuration list for PBXNativeTarget "PLCrashReporter-PLCrashReporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B62E3D7494EFAFC58F791287B24DDE88 /* Debug */,
+				0A7B6F17E00A2FA38BA16431F149EBE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D24001E24BD68B09E61F20B3F4B15149 /* Build configuration list for PBXNativeTarget "webfunny_otel_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A7BD584EF65571EB0DAC683757CCA82 /* Debug */,
+				E28421371452B46E1577944A52464B0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF3ADA9AA4F1F079DB08BD845652D733 /* Build configuration list for PBXNativeTarget "Pods-TestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D850140782977E2953B5339E9D8B36EA /* Debug */,
+				27BD8542AD35A336075FFA81A8098FD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
