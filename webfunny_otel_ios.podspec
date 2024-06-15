@@ -11,7 +11,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'webfunny_otel_ios'  
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'webfunny_otel_ios pod for iOS' 
   s.description      = <<-DESC
 The webfunny_otel_ios agent for iOS provides a Swift package that captures:
@@ -24,10 +24,10 @@ DESC
 
   s.swift_version    = '5.1'
 
-  s.homepage         = 'https://github.com/a597873885/webfunny_otel_ios.git'
+  s.homepage         = 'https://github.com/HK-ant/webfunny_otel_ios.git'
   s.license          = { :type => "Apache", :file => 'LICENSE' }
   s.author           = { 'Webfunny' => 'www.webfunny.com' }
-  s.source           = { :git => 'https://github.com/a597873885/webfunny_otel_ios.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/HK-ant/webfunny_otel_ios.git', :tag => s.version.to_s }
 # Make sure the deployment target matches with Package.swift
   s.ios.deployment_target = '11.0'
   s.source_files = 'SplunkRumWorkspace/SplunkRum/SplunkRum/**/*.swift'
