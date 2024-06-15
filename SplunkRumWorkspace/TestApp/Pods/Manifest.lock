@@ -1,0 +1,29 @@
+PODS:
+  - PLCrashReporter (1.11.1)
+  - SplunkOtel (0.11.3)
+  - SplunkOtelCrashReporting (0.6.0):
+    - PLCrashReporter (~> 1.11.1)
+    - SplunkOtel (~> 0.11.0)
+
+DEPENDENCIES:
+  - SplunkOtel (from `/Users/huangkai/Documents/Develop/splunk-otel-ios`)
+  - SplunkOtelCrashReporting (from `/Users/huangkai/Documents/Develop/splunk-otel-ios-crashreporting`)
+
+SPEC REPOS:
+  trunk:
+    - PLCrashReporter
+
+EXTERNAL SOURCES:
+  SplunkOtel:
+    :path: "/Users/huangkai/Documents/Develop/splunk-otel-ios"
+  SplunkOtelCrashReporting:
+    :path: "/Users/huangkai/Documents/Develop/splunk-otel-ios-crashreporting"
+
+SPEC CHECKSUMS:
+  PLCrashReporter: 5d2d3967afe0efad61b3048d617e2199a5d1b787
+  SplunkOtel: 71454d75b718988907b6204fed76a5b596ac998d
+  SplunkOtelCrashReporting: c4adf028b3f55b052fdd4337b259cb9008ebd98b
+
+PODFILE CHECKSUM: bbe7b2a6638f2aee624806a640c483e29e99dfe5
+
+COCOAPODS: 1.15.2

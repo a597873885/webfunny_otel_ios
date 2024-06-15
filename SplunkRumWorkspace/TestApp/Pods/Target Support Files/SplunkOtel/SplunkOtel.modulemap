@@ -1,0 +1,6 @@
+framework module SplunkOtel {
+  umbrella header "SplunkOtel-umbrella.h"
+
+  export *
+  module * { export * }
+}
