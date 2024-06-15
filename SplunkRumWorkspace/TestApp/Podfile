@@ -1,7 +1,0 @@
-platform :ios, '11.0'
-use_frameworks!
-
-target 'TestApp' do
-  pod 'SplunkOtelCrashReporting', :path => '/Users/huangkai/Documents/Develop/splunk-otel-ios-crashreporting'
-  pod 'SplunkOtel', :path=> '/Users/huangkai/Documents/Develop/splunk-otel-ios'
-end

@@ -1,0 +1,7 @@
+platform :ios, '11.0'
+use_frameworks!
+
+target 'TestApp' do
+  pod 'webfunny_otel_ios_crashreporting', :path => '/Users/huangkai/Documents/Develop/webfunny_otel_ios_crashreporting'
+  pod 'webfunny_otel_ios', :path=> '/Users/huangkai/Documents/Develop/webfunny_otel_ios'
+end

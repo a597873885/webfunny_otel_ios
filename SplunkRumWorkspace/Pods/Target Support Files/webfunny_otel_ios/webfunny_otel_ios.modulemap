@@ -1,0 +1,6 @@
+framework module webfunny_otel_ios {
+  umbrella header "webfunny_otel_ios-umbrella.h"
+
+  export *
+  module * { export * }
+}
