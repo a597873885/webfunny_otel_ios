@@ -47,12 +47,7 @@ struct ContentView: View {
     }
 
     func throwy() {
-//        NSException(name: NSExceptionName(rawValue: "IllegalFormatError"), reason: "Could not parse input", userInfo: nil).raise()
-        let values = ["A", "B", "C"]
-        values[0] // A
-        values[1] // B
-        values[2] // C
-        values[3] // Fatal error: Index out of range
+        NSException(name: NSExceptionName(rawValue: "IllegalFormatError"), reason: "Could not parse input", userInfo: nil).raise()
         print("should not reach here")
     }
     func throwyBackgroundThread() {
@@ -64,13 +59,6 @@ struct ContentView: View {
         let null = UnsafePointer<UInt8>(bitPattern: 0)
         let derefNull = null!.pointee
     }
-    func manualSpan() {
-        let tracerProvider = OpenTelemetry.instance.tracerProvider as! TracerProviderSdk
-        let span = tracerProvider.get(instrumentationName: "manual").spanBuilder(spanName: "manualSpan").startSpan()
-        span.setAttribute(key: "manualKey", value: "manualValue")
-        span.end()
-
-    }
 
     @State var text = ""
     @State var toggle = true
@@ -81,54 +69,46 @@ struct ContentView: View {
             Button(action: {
                 self.throwy()
             }) {
-                Text("Throw!")
+                Text("测试exception崩溃!")
             }
             Button(action: {
                 self.throwyBackgroundThread()
             }) {
-                Text("Throw (bg)!")
+                Text("测试后台线程崩溃!")
             }
             Button(action: {
                 self.hardCrash()
             }) {
-                Text("Hard crash")
+                Text("测试崩溃越界")
             }
             Button(action: {
                 self.networkRequest()
             }) {
-                Text("Network (req)!")
+                Text("测试网络请求!")
             }
             Button(action: {
                 self.downloadRequest()
             }) {
-                Text("Download")
-            }
-            Button(action: {
-                self.manualSpan()
-            }) {
-                Text("Manual Span")
+                Text("测试下载")
             }
         }
         HStack {
-            TextField("Text", text: $text)
+            TextField("输入文字", text: $text)
                 .padding()
                 .keyboardType(.numberPad)
             Button(action: self.hideKeyboard, label: {
-                Text("OK")
+                Text("确定")
             })
         }
         HStack {
-            Toggle(isOn: $toggle) {
-                Text("Toggle")
-            }
             // Perhaps add a button to dismiss it
-            Button("Modal") {
+            Button("present新页面") {
                 isShowingModal.toggle()
             }.sheet(isPresented: $isShowingModal, content: {
                 VStack {
-                    Text("MODAL SHEET")
-                    Text("PLEASE IGNORE")
-                    Button("Dismiss") {
+                    Text("标题")
+                    Text("描述")
+                    Button("关闭") {
                         isShowingModal.toggle()
                     }
                 }

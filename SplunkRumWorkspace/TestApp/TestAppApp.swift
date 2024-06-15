@@ -24,7 +24,12 @@ struct TestAppApp: App {
         SplunkRumBuilder(beaconUrl: "https://cloud.webfunny.com/wfMonitor/otel/trace", rumAuth: "")
             .allowInsecureBeacon(enabled: true)
             .debug(enabled: true)
-            .globalAttributes(globalAttributes: ["strKey": "Some string", "intkey": 7])
+            .globalAttributes(globalAttributes: 
+                                ["userId": "手机号",
+                                 "userTag": "用户表情",
+                                 "projectVersion": "0.0.1",
+                                 "env": "dev、pro",
+                                 "customrKey": "生成内置id(uuid)"])
             .enableDiskCache(enabled: true)
             .setApplicationName("TestApp")
             .build()

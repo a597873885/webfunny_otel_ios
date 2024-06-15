@@ -6,24 +6,20 @@ PODS:
     - webfunny_otel_ios (~> 0.0.1)
 
 DEPENDENCIES:
-  - webfunny_otel_ios (from `/Users/huangkai/Documents/Develop/webfunny_otel_ios`)
-  - webfunny_otel_ios_crashreporting (from `/Users/huangkai/Documents/Develop/webfunny_otel_ios_crashreporting`)
+  - webfunny_otel_ios (~> 0.0.2)
+  - webfunny_otel_ios_crashreporting (~> 0.0.2)
 
 SPEC REPOS:
   trunk:
     - PLCrashReporter
-
-EXTERNAL SOURCES:
-  webfunny_otel_ios:
-    :path: "/Users/huangkai/Documents/Develop/webfunny_otel_ios"
-  webfunny_otel_ios_crashreporting:
-    :path: "/Users/huangkai/Documents/Develop/webfunny_otel_ios_crashreporting"
+    - webfunny_otel_ios
+    - webfunny_otel_ios_crashreporting
 
 SPEC CHECKSUMS:
   PLCrashReporter: 499c53b0104f95c302d94fd723ebb03c56d9bac8
   webfunny_otel_ios: 1008386ee57ddb2b19f5d11545f9eceb12702f02
   webfunny_otel_ios_crashreporting: af72f73ceb2a37468e70caf103d42008a9c3679c
 
-PODFILE CHECKSUM: 632a38c11c5576bef633fced3d2823070253707d
+PODFILE CHECKSUM: a17473891ec75c68eeec26b8f0a4d9b23fba84cb
 
 COCOAPODS: 1.15.2
